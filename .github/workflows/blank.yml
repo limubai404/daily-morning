@@ -12,12 +12,12 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: <可用的 Python 版本>
+          python-version: 3.0；由于未提供具体版本，请选择合适的Python版本
       
       - name: Set timezone
         run: |
-          cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-      
+          sudo timedatectl set-timezone Asia/Shanghai；使用timedatectl命令来设置时区
+
       - name: Install pip packages
         run: |
           python -m pip install --upgrade pip
